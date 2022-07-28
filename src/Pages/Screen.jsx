@@ -36,9 +36,13 @@ const cntrs = [
 ];
 
 const Countries = () => {
-  const rec = window.webkitSpeechRecognition
+  let rec = window.webkitSpeechRecognition
     ? new window.webkitSpeechRecognition()
     : new window.SpeechRecognition();
+
+  if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    rec = window.SFSpeechRecognizer();
+  }
 
   rec.lang = "ru-RU";
 
