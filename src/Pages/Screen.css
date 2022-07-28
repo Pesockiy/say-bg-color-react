@@ -2,14 +2,54 @@ body {
     margin: 0;
     padding: 0;
 }
-
+#root {
+    height: 100vh;
+}
 .screen {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     padding: 20px;
-    background-color: brown;
     font-size: 34px;
     font-family: fantasy;
+}
+.screen span {
+    z-index: 2;
+}
+.rainbow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    display: flex;
+}
+.flag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    display: flex;
+}
+.flag--tb {
+    flex-direction: column;
+}
+
+.rainbow__color.rainbow__color {
+    z-index: 1;
+    animation: show .2s both;
+}
+@keyframes show {
+    0% {
+        transform: translateX(-1000%);
+    }
+    100% {
+        flex: 1;
+        transform: translateX(0%);
+    }
 }
