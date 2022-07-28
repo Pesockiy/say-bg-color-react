@@ -1,0 +1,35 @@
+.block {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.button {
+    display: inline-flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-family: fantasy;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: brown;
+    color: #fff;
+    border: 2px solid red;
+}
+
+line {
+    transition: stroke-width .4s;
+}
+
+.gallery {
+    height: 2000px;
+}
+button {
+    cursor: pointer;
+}
